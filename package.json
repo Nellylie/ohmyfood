@@ -7,8 +7,12 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
- "sass": "sass --watch ./sass/main.scss:./style/ohmyfood_style.css --style expanded"},
+ "sass": "sass --watch ./sass/main.scss:./style/ohmyfood_style.css --style expanded",
+"prefix": "postcss ./style/ohmyfood_style.css --use autoprefixer -d ./style/prefixed/"
+
+},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "browserslist": "last 4 versions"
 }
