@@ -1,7 +1,16 @@
+@import 'variables.scss';
+
 @mixin flexbox ($flex, $flexdirection, $justifycontent, $aligncontent, $flexwrap) {
     display: $flex;
     flex-direction: $flexdirection;
     justify-content: $justifycontent;
     align-content: $aligncontent;
     flex-wrap: $flexwrap;
+}
+@mixin gradiant($opacity) {
+    background-image: linear-gradient(
+        to top,
+        rgba(147, 86, 220, $opacity),
+        rgba(255, 121, 218, $opacity)
+    );
 }

@@ -1,19 +1,206 @@
 body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
   text-align: center;
   width: 100%;
   max-width: 768px;
+  min-width: 250px;
   margin: auto;
 }
 
+h2 {
+  text-align: left;
+}
+
+.restaurants__titre {
+  margin-left: 40px;
+}
+
+.fonctionnement__titre {
+  margin-left: 40px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+.form__boutton {
+  border-radius: 20px 20px 20px 20px;
+  color: white;
+  border: none;
+  width: 170px;
+  height: 40px;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+
+.aime__animation, .restaurant__aime input:checked ~ .aime__coeur, .restaurant__aime input:hover ~ .aime__coeur {
+  background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+.aime__coeur {
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1s;
+}
+
+.aime__position {
+  position: absolute;
+}
+
+.restaurant__aime {
+  display: inline-block;
+  position: relative;
+  top: -50px;
+  text-align: right;
+  width: 80%;
+}
+
+.restaurant__aime input {
+  visibility: hidden;
+}
+
+.main__restaurants {
+  background-color: #F6F6F6;
+}
+
+.restaurants__menu {
+  background-color: white;
+  width: 90%;
+  margin: 40px auto;
+  align-content: center;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.menu__lien {
+  width: auto;
+  margin: auto;
+}
+
+.lien__carte {
+  width: 100%;
+  margin: 40px auto;
+}
+
 .carte__image {
+  margin-top: -40px;
   height: 200px;
   width: 100%;
+}
+
+.carte__titre {
+  text-align: left;
 }
 
 .img--width {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.main__fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.fonctionnement__indication {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+  padding: 20px;
+  width: 40%;
+  border-radius: 100px;
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+}
+
+.indication__index {
+  color: white;
+  height: 20px;
+  background-color: #9356DC;
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin: auto 20px auto -30px;
+}
+
+.indication__aide {
+  margin: auto;
+}
+
+.indication__icone {
+  margin: auto 20px auto 0;
+}
+
+.food__form {
+  background-color: #F6F6F6;
+  padding-bottom: 20px;
+}
+
+.form__localisation {
+  background-color: #EAEAEA;
+  padding: 20px;
+}
+
+.form__localisation input {
+  background-color: #EAEAEA;
+  text-align: center;
+  border: none;
+}
+
+.form__localisation ::placeholder {
+  opacity: 1;
+  color: black;
+}
+
+footer {
+  background: #353535;
+  color: #FFF;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.food-footer__titre {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: lowercase;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.food-footer__nav {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+li a:hover {
+  color: #cccccc;
+}
+li i {
+  margin-right: 5px;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=ohmyfood_style.css.map */

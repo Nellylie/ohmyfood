@@ -1,4 +1,18 @@
 .food__form {
+background-color: $gray-light;
+ padding-bottom:20px;
+}
 
- 
+.form__localisation{
+background-color: $gray-medium;
+padding:20px;}
+
+.form__localisation input{
+    background-color: $gray-medium;
+    text-align: center;
+    border:none;
+}
+.form__localisation ::placeholder{
+    opacity: 1;
+    color:black;
 }

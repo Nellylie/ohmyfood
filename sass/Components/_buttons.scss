@@ -1,0 +1,52 @@
+@use '../Utils/mixins.scss';
+@use '../Utils/variables.scss';
+
+
+
+.form__boutton {
+
+    border-radius: 20px 20px 20px 20px;
+    color: white;
+    border: none;
+    width: 170px;
+    height: 40px;
+    @include mixins.gradiant(1);
+}
+
+.aime__animation {
+    background: -webkit-linear-gradient(90deg, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+
+}
+
+.aime__coeur {
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 1s;
+}
+
+.aime__position{
+    position: absolute;
+
+}
+.restaurant__aime{
+    display:inline-block;
+    position:relative;
+    top:-50px;
+    text-align:right;
+    width:80%;
+
+}
+.restaurant__aime input{
+    visibility: hidden;
+}
+.restaurant__aime input:hover ~ .aime__coeur{
+    @extend .aime__animation;
+}
+
+.restaurant__aime input:checked ~ .aime__coeur{
+    @extend .aime__animation;
+}
