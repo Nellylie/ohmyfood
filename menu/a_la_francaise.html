@@ -24,28 +24,29 @@
 <body>
     <div class="loader"></div>
     <header class="header-omf">
-        <div class="header-omf__retour"><a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+        <div class="header-omf__retour"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
         <div class="header-omf__logo">
             <img src="../images/logo/ohmyfood.png"
                 alt="logo oh my food"
                 title="oh my food">
         </div>
+       
     </header>
+    <img  class="img--width" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" title="">
     <main class="main-menu">
-        <div class="main-menu__img"><img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                alt=""
-                title=""></div>
-        <header class="main-menu__header">
+        
+       
             <h1 class="header__heading">A la française</h1>
-            <label class="restaurant__aime">
-                <input type="checkbox">
+          <div class="menu-aime"> <label for="heart" class="restaurant__aime ">
+                <input type="checkbox" name="heart" id="heart">
                 <i class="fa-regular fa-heart fa-2x aime__position">
                 </i>
                 <i class="fa-solid fa-heart fa-2x aime__coeur aime__position"></i>
-            </label>
-        </header>
+            </label></div> 
+        
 
-        <section class="menu">
+        
+            
             <h2 class="menu__heading">Entrées</h2>
             <article class="menu__recette">
                 <h3 class="recette__heading">Tartare de poulpe acidulé</h3>
@@ -126,7 +127,7 @@
                 </button>
             </article>
         </section>
-        <button class="menumain__validation">Commander</button>
+        <button class="menumain__validation form__boutton ">Commander</button>
     </main>
     <footer class="food-footer"><h2 class="food-footer__titre">Ohmyfood</h2>
         <nav class="food-footer__nav">

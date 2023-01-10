@@ -50,3 +50,12 @@
 .restaurant__aime input:checked ~ .aime__coeur{
     @extend .aime__animation;
 }
+.label--width{
+
+    width: 50%;
+}
+
+.menu-aime{
+
+    padding-top: 10px;
+}
