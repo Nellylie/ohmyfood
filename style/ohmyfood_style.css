@@ -90,12 +90,66 @@ button, input, select {
   padding-top: 50px;
 }
 
+.recette__validation {
+  background-color: #99e2d0;
+  color: #FFF;
+  font-size: 20px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+.recette__titre-description {
+  font-size: 1rem;
+  white-space: nowrap;
+  flex: 1;
+  text-align: left;
+  padding: 10px 5px 0 10px;
+}
+.recette__titre-description > h3 {
+  margin: 5px 0;
+}
+
+.recette__prix-validation {
+  font-size: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+.recette__prix-validation > p {
+  margin-top: 45px;
+  margin-right: 10px;
+}
+
+.recette__description {
+  margin: 0;
+}
+
+.menu__recette {
+  background-color: white;
+  font-size: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
+  width: 80%;
+  display: flex;
+  height: 80px;
+  margin: 50px auto;
+}
+
 .header__heading {
+  white-space: nowrap;
   font-family: "Shrikhand", cursive;
   font-weight: normal;
   font-size: 2rem;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 10px;
   text-align: start;
   width: 50%;
 }
