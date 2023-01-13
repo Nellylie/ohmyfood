@@ -142,6 +142,124 @@ button, input, select {
   margin: 50px auto;
 }
 
+#objet {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  flex-direction: row;
+  visibility: hidden;
+  justify-content: center;
+  -webkit-justify-content: center;
+  background-color: rgba(147, 86, 220, 0.6);
+  animation-name: loader;
+  animation-duration: 3s;
+}
+
+@keyframes loader {
+  to {
+    visibility: visible;
+  }
+}
+.letter {
+  font-size: 3rem;
+  color: #353535;
+  font-family: "Shrikhand", cursive;
+  text-transform: lowercase;
+  font-weight: lighter;
+}
+
+.box {
+  display: flex;
+}
+
+.space {
+  padding-right: 40px;
+}
+
+.space2 {
+  padding-right: 15px;
+}
+
+.objet_cercle,
+.objet_interne,
+.objet_centre {
+  border-radius: 50%;
+}
+
+.objet_cercle,
+.objet_interne,
+.objet_centre {
+  flex: none;
+}
+
+.letter,
+.objet_cercle {
+  align-self: center;
+}
+
+.objet_cercle {
+  align-items: right;
+  justify-content: right;
+  height: 50px;
+  width: 50px;
+  background-color: #FF79DA;
+}
+
+.objet_interne {
+  align-self: center;
+  -ms-align-self: center;
+  justify-content: center;
+  -ms-justify-content: center;
+  height: 50%;
+  width: 50%;
+  background-color: #9356DC;
+  animation-name: objetAnimate;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.objet_centre {
+  align-self: center;
+  -ms-align-self: center;
+  height: 25%;
+  width: 25%;
+  background-color: #353535;
+  animation-name: centreAnimate;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes objetAnimate {
+  to {
+    height: 90%;
+    width: 90%;
+  }
+}
+@keyframes objetAnimate {
+  to {
+    height: 90%;
+    width: 90%;
+  }
+}
+@keyframes centreAnimate {
+  to {
+    height: 90%;
+    width: 90%;
+  }
+}
+@keyframes centreAnimate {
+  to {
+    height: 90%;
+    width: 90%;
+  }
+}
 .header__heading {
   white-space: nowrap;
   font-family: "Shrikhand", cursive;

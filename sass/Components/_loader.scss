@@ -1,0 +1,157 @@
+#objet {
+    position: fixed;
+    height: 100%;
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: row;
+  opacity: 0;
+    justify-content: center;
+    -webkit-justify-content: center;
+    background-color: adjust-color($color-primary, $alpha: -0.4);
+    animation-name: loader;
+    animation-duration: 3s;
+
+
+
+
+
+
+}
+
+@keyframes loader {
+    
+      
+
+        to {
+            opacity: 1;
+           
+        }
+    }
+
+
+
+
+
+
+.letter {
+    font-size: 3rem;
+    color: #353535;
+    font-family: 'Shrikhand', cursive;
+    text-transform: lowercase;
+    font-weight: lighter;
+
+
+}
+
+
+
+
+
+
+.box {
+
+    display: flex;
+
+
+}
+
+.space {
+    padding-right: 40px;
+}
+
+.space2 {
+
+    padding-right: 15px;
+}
+
+.objet_cercle,
+.objet_interne,
+.objet_centre {
+    border-radius: 50%;
+
+}
+
+.objet_cercle,
+.objet_interne,
+.objet_centre {
+
+    flex: none;
+}
+
+.letter,
+.objet_cercle {
+    align-self: center;
+
+}
+
+.objet_cercle {
+    align-items: right;
+
+    justify-content: right;
+
+    height: 50px;
+    width: 50px;
+    background-color: $color-secondary ;
+}
+
+.objet_interne {
+    align-self: center;
+    -ms-align-self: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 50%;
+    width: 50%;
+    background-color: $color-primary;
+    animation-name: objetAnimate;
+    animation-duration: 500ms;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.objet_centre {
+    align-self: center;
+    -ms-align-self: center;
+    height: 25%;
+    width: 25%;
+    background-color: #353535;
+    animation-name: centreAnimate;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes objetAnimate {
+    to {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@keyframes objetAnimate {
+    to {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+
+@keyframes centreAnimate {
+    to {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@keyframes centreAnimate {
+    to {
+        height: 90%;
+        width: 90%;
+    }
+}
