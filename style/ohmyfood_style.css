@@ -153,14 +153,23 @@ button, input, select {
   visibility: hidden;
   justify-content: center;
   -webkit-justify-content: center;
-  background-color: rgba(147, 86, 220, 0.6);
+  background-color: white;
   animation-name: loader;
   animation-duration: 3s;
 }
 
 @keyframes loader {
-  to {
+  0% {
     visibility: visible;
+  }
+  70% {
+    background-color: white;
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0;
   }
 }
 .letter {
