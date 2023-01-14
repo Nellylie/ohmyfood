@@ -155,7 +155,7 @@ button, input, select {
   -webkit-justify-content: center;
   background-color: white;
   animation-name: loader;
-  animation-duration: 6s;
+  animation-duration: 3s;
 }
 
 @keyframes loader {
