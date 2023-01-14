@@ -155,19 +155,28 @@ button, input, select {
   -webkit-justify-content: center;
   background-color: white;
   animation-name: loader;
-  animation-duration: 3s;
+  animation-duration: 6s;
 }
 
 @keyframes loader {
   0% {
     visibility: visible;
-  }
-  70% {
+    opacity: 1;
     background-color: white;
+    opacity: 1;
+  }
+  65% {
     visibility: visible;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+  }
+  80% {
+    background-color: rgba(255, 255, 255, 0.7);
     opacity: 1;
   }
   100% {
+    background-color: rgba(255, 255, 255, 0);
     visibility: visible;
     opacity: 0;
   }
