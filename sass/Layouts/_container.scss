@@ -1,12 +1,18 @@
 
 .main__restaurants{
     background-color: $gray-light;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+    padding:20px;
+    margin:0;
 
 }
 .restaurants__menu{
     background-color: white;
     width:90%;
-    margin:40px auto;
+    margin:auto;
     align-content: center;
     border-radius: 40px;
     overflow: hidden;
@@ -19,7 +25,7 @@
 }
 .lien__carte{
     width:100%;
-    margin:40px auto;
+    margin:auto;
 }
 
 .carte__image{
@@ -30,9 +36,17 @@ width: 100%;
 
 .carte__titre{
     text-align:left;
+    margin:15px;
 
 }
-
+.titre__h2{
+    margin:0;
+    padding:0;
+}
+.titre__description{
+    margin:0;
+    padding:0;
+}
 .img--width{
 
    
@@ -62,9 +76,11 @@ width: 100%;
     flex-direction: row;
     margin:20px auto;
     padding:20px;
-    width:40%;
+    width:70%;
     border-radius: 100px;
     box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .indication__index{
     color:white;

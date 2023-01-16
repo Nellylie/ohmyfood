@@ -26,14 +26,17 @@
 
 .aime__position {
     position: absolute;
+    right:0px;
+    top:0px;
 }
 
 .restaurant__aime {
-    display: inline-block;
+    display:block;
+    width:auto;
     position: relative;
-    top: -90px;
-    text-align: right;
-    width: 80%;
+    top:-40px;
+    right:0;
+    font-size: 0.8rem;
 }
 
 .restaurant__aime input {
@@ -53,62 +56,116 @@
 }
 
 .menu-aime {
-    padding-top: 50px;
+    padding-top: 0;
 }
 
 .recette {
     &__validation {
         background-color: #99e2d0;
         color: $white;
-        font-size: 20px;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        width: 100px;
+        font-size: 1rem;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 20%;
+        margin-right: -20%;
+        max-width:100px;
         display: flex;
         align-items: center;
         height: 100%;
         justify-content: center;
-        margin: auto;
+        z-index: 1;
+        transition: margin-right 1s;
+        overflow: hidden;
     }
 }
+.cadre-check{
+    margin:auto;
+    position:relative;
+    width:30px;
+    height:30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;    
+    z-index: 1;
+    transition:transform 1s;
+    overflow: hidden;
+}
+.fa-check{
+    display:inline;
+    color:$color-tertiary;
+    margin:auto;
+    align-self: center;
+    vertical-align: middle;
+}
+
+
+
 
 .recette__titre-description {
     font-size: 1rem;
     white-space: nowrap;
     flex: 1;
     text-align: left;
+    width:100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
     padding:10px 5px 0 10px;
+    transition:width 1s;
     &>h3 {
         margin:5px 0;
     }
 }
-
-.recette__prix-validation {
-    font-size: 1rem;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: baseline;
-
-    &>p {
-        margin-top: 45px;
-        margin-right: 10px;
-    }
+.recette__titre-description>h3{
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
+.menu__recette:hover{
+    .recette__titre-description{
+        width:30%;
+    }
+    .recette__validation{
+    margin-right:0px;
+    .cadre-check{
+    transform:rotate(-360deg);}
+}}
 
 .recette__description {
     margin:0;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.menu {
-    &__recette {
-        background-color:white;
-        font-size: 20px;
-        border-radius:20px 20px 20px 20px;
-        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
-        width: 80%;
-        display: flex;
-        height: 80px;
-        margin: 50px auto;
+.recette__prix{
+    font-size: 1rem;
+    position:relative;
+    right:10px;
+    top:28px;
+    font-weight: 700;
+    &>p {
     }
 }
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    &__recette {
+        background-color:white;
+        font-size: 1rem;
+        border-radius:20px 20px 20px 20px;
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
+        width: 90%;
+        max-width:400px;
+        min-width:200px;
+        display: flex;
+        height: 80px;
+        margin: auto;
+        overflow: hidden;
+    }
+}
+.menumain__validation{
+    margin:20px auto;
+}
+

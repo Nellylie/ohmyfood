@@ -1,3 +1,7 @@
+:root {
+  font-size: 20px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -10,14 +14,23 @@ body {
 
 h2 {
   text-align: left;
+  font-size: 1rem;
 }
 
 .restaurants__titre {
-  margin-left: 40px;
+  padding-top: 0;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 80%;
 }
 
 .fonctionnement__titre {
+  margin-top: 40px;
   margin-left: 40px;
+  text-align: left;
+  width: 80%;
 }
 
 a {
@@ -68,14 +81,17 @@ button, input, select {
 
 .aime__position {
   position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 .restaurant__aime {
-  display: inline-block;
+  display: block;
+  width: auto;
   position: relative;
-  top: -90px;
-  text-align: right;
-  width: 80%;
+  top: -40px;
+  right: 0;
+  font-size: 0.8rem;
 }
 
 .restaurant__aime input {
@@ -87,21 +103,48 @@ button, input, select {
 }
 
 .menu-aime {
-  padding-top: 50px;
+  padding-top: 0;
 }
 
 .recette__validation {
   background-color: #99e2d0;
   color: #FFF;
-  font-size: 20px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  width: 100px;
+  font-size: 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 20%;
+  margin-right: -20%;
+  max-width: 100px;
   display: flex;
   align-items: center;
   height: 100%;
   justify-content: center;
+  z-index: 1;
+  transition: margin-right 1s;
+  overflow: hidden;
+}
+
+.cadre-check {
   margin: auto;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 1s;
+  overflow: hidden;
+}
+
+.fa-check {
+  display: inline;
+  color: #99E2D0;
+  margin: auto;
+  align-self: center;
+  vertical-align: middle;
 }
 
 .recette__titre-description {
@@ -109,37 +152,65 @@ button, input, select {
   white-space: nowrap;
   flex: 1;
   text-align: left;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding: 10px 5px 0 10px;
+  transition: width 1s;
 }
 .recette__titre-description > h3 {
   margin: 5px 0;
 }
 
-.recette__prix-validation {
-  font-size: 1rem;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: baseline;
+.recette__titre-description > h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.recette__prix-validation > p {
-  margin-top: 45px;
-  margin-right: 10px;
+
+.menu__recette:hover .recette__titre-description {
+  width: 30%;
+}
+.menu__recette:hover .recette__validation {
+  margin-right: 0px;
+}
+.menu__recette:hover .recette__validation .cadre-check {
+  transform: rotate(-360deg);
 }
 
 .recette__description {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
+.recette__prix {
+  font-size: 1rem;
+  position: relative;
+  right: 10px;
+  top: 28px;
+  font-weight: 700;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .menu__recette {
   background-color: white;
-  font-size: 20px;
+  font-size: 1rem;
   border-radius: 20px 20px 20px 20px;
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
-  width: 80%;
+  width: 90%;
+  max-width: 400px;
+  min-width: 200px;
   display: flex;
   height: 80px;
-  margin: 50px auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.menumain__validation {
+  margin: 20px auto;
 }
 
 #objet {
@@ -282,7 +353,7 @@ button, input, select {
   white-space: nowrap;
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0;
   margin-top: 0;
   margin-left: 10px;
@@ -292,6 +363,15 @@ button, input, select {
 
 .main-menu__header {
   width: 100%;
+}
+
+.menu__titre {
+  width: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: 5px solid #99E2D0;
+  margin-left: 20px;
+  margin-top: 40px;
 }
 
 .header-omf__logo {
@@ -308,12 +388,18 @@ button, input, select {
 
 .main__restaurants {
   background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin: 0;
 }
 
 .restaurants__menu {
   background-color: white;
   width: 90%;
-  margin: 40px auto;
+  margin: auto;
   align-content: center;
   border-radius: 40px;
   overflow: hidden;
@@ -326,7 +412,7 @@ button, input, select {
 
 .lien__carte {
   width: 100%;
-  margin: 40px auto;
+  margin: auto;
 }
 
 .carte__image {
@@ -337,6 +423,17 @@ button, input, select {
 
 .carte__titre {
   text-align: left;
+  margin: 15px;
+}
+
+.titre__h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.titre__description {
+  margin: 0;
+  padding: 0;
 }
 
 .img--width {
@@ -359,9 +456,11 @@ button, input, select {
   flex-direction: row;
   margin: 20px auto;
   padding: 20px;
-  width: 40%;
+  width: 70%;
   border-radius: 100px;
   box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .indication__index {
@@ -411,6 +510,12 @@ button, input, select {
   color: black;
 }
 
+.form__titre {
+  width: 80%;
+  margin: 20px auto;
+  font-size: 1.5rem;
+}
+
 footer {
   background: #353535;
   color: #FFF;
@@ -421,10 +526,12 @@ footer {
 .food-footer__titre {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.5rem;
   text-transform: lowercase;
   margin-left: 40px;
   margin-bottom: 10px;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .food-footer__nav {
