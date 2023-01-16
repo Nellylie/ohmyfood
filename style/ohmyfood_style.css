@@ -1,3 +1,39 @@
+#entree-1:checked ~ label .fa-check {
+  visibility: visible;
+}
+
+#entree-1 {
+  visibility: hidden;
+}
+
+#entree-1 ~ label .fa-check {
+  visibility: hidden;
+}
+
+#entree-2:checked ~ label .fa-check {
+  visibility: visible;
+}
+
+#entree-2 {
+  visibility: hidden;
+}
+
+#entree-2 ~ label .fa-check {
+  visibility: hidden;
+}
+
+#entree-3:checked ~ label .fa-check {
+  visibility: visible;
+}
+
+#entree-3 {
+  visibility: hidden;
+}
+
+#entree-3 ~ label .fa-check {
+  visibility: hidden;
+}
+
 :root {
   font-size: 20px;
 }

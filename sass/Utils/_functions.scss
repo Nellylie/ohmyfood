@@ -1,0 +1,14 @@
+
+$nbrEntree:3;
+@for $i from 1 through $nbrEntree{
+    #entree-#{$i}:checked ~ label .fa-check {
+        visibility: visible;
+      }
+      
+      #entree-#{$i} {
+        visibility: hidden;
+      }
+      #entree-#{$i} ~ label .fa-check {
+        visibility: hidden;
+      }
+}
