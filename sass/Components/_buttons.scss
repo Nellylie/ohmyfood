@@ -16,6 +16,10 @@
     -webkit-text-fill-color: transparent;
     opacity: 1;
 }
+.aime--menu-position{
+    position:relative;
+    right:10px;
+}
 
 .aime__coeur {
     color: rgb(255, 255, 255);
@@ -93,7 +97,6 @@
     overflow: hidden;
 }
 .fa-check{
-    display:inline;
     color:$color-tertiary;
     margin:auto;
     align-self: center;
@@ -127,10 +130,17 @@
         width:30%;
     }
     .recette__validation{
-    margin-right:0px;
-    .cadre-check{
-    transform:rotate(-360deg);}
-}}
+    margin-right:0px;}
+    .recette__validation .cadre-check .check--position{
+    
+    transform:rotate(-360deg);}}
+
+.menu__recette {cursor: pointer;}
+
+.check--position{
+        transform:rotate(200deg);
+        transition:transform 1s;
+    }
 
 .recette__description {
     margin:0;

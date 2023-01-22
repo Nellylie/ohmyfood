@@ -1,14 +1,24 @@
 
-$nbrEntree:3;
-@for $i from 1 through $nbrEntree{
-    #entree-#{$i}:checked ~ label .fa-check {
-        visibility: visible;
-      }
-      
-      #entree-#{$i} {
-        visibility: hidden;
-      }
-      #entree-#{$i} ~ label .fa-check {
-        visibility: hidden;
-      }
-}
+$nbrRecette:10;
+
+
+@for $i from 1 through $nbrRecette{
+    #menu__recette-#{$i}{
+      opacity:0;
+      margin-top:0;
+      animation-name:apparition-menu;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+      animation-delay: 0.5s+($i*0.50);
+    }
+  }
+
+  @keyframes apparition-menu {
+       from{
+      opacity: 0;
+    margin-top:5px;
+  }
+  to{
+    opacity: 1;
+    margin-top:0px;}
+  }

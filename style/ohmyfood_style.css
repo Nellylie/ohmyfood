@@ -1,39 +1,103 @@
-#entree-1:checked ~ label .fa-check {
-  visibility: visible;
+#menu__recette-1 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 1s;
 }
 
-#entree-1 {
-  visibility: hidden;
+#menu__recette-2 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
 }
 
-#entree-1 ~ label .fa-check {
-  visibility: hidden;
+#menu__recette-3 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2s;
 }
 
-#entree-2:checked ~ label .fa-check {
-  visibility: visible;
+#menu__recette-4 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
 }
 
-#entree-2 {
-  visibility: hidden;
+#menu__recette-5 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 3s;
 }
 
-#entree-2 ~ label .fa-check {
-  visibility: hidden;
+#menu__recette-6 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 3.5s;
 }
 
-#entree-3:checked ~ label .fa-check {
-  visibility: visible;
+#menu__recette-7 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 4s;
 }
 
-#entree-3 {
-  visibility: hidden;
+#menu__recette-8 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
 }
 
-#entree-3 ~ label .fa-check {
-  visibility: hidden;
+#menu__recette-9 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 5s;
 }
 
+#menu__recette-10 {
+  opacity: 0;
+  margin-top: 0;
+  animation-name: apparition-menu;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 5.5s;
+}
+
+@keyframes apparition-menu {
+  from {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
 :root {
   font-size: 20px;
 }
@@ -46,6 +110,12 @@ body {
   max-width: 768px;
   min-width: 250px;
   margin: auto;
+}
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+    max-width: 992;
+  }
 }
 
 h2 {
@@ -106,6 +176,11 @@ button, input, select {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+}
+
+.aime--menu-position {
+  position: relative;
+  right: 10px;
 }
 
 .aime__coeur {
@@ -176,7 +251,6 @@ button, input, select {
 }
 
 .fa-check {
-  display: inline;
   color: #99E2D0;
   margin: auto;
   align-self: center;
@@ -209,8 +283,17 @@ button, input, select {
 .menu__recette:hover .recette__validation {
   margin-right: 0px;
 }
-.menu__recette:hover .recette__validation .cadre-check {
+.menu__recette:hover .recette__validation .cadre-check .check--position {
   transform: rotate(-360deg);
+}
+
+.menu__recette {
+  cursor: pointer;
+}
+
+.check--position {
+  transform: rotate(200deg);
+  transition: transform 1s;
 }
 
 .recette__description {
@@ -499,6 +582,11 @@ button, input, select {
   font-weight: 600;
 }
 
+.fonctionnement__indication--rose {
+  background-color: rgba(147, 86, 220, 0.3);
+  color: #9356DC;
+}
+
 .indication__index {
   color: white;
   height: 20px;
@@ -510,6 +598,7 @@ button, input, select {
 
 .indication__aide {
   margin: auto;
+  color: black;
 }
 
 .indication__icone {
