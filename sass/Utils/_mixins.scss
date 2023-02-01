@@ -8,14 +8,14 @@
     flex-wrap: $flexwrap;
 }
 @mixin gradiant($opacity) {
-    background-image: linear-gradient(
+    background: linear-gradient(
         to top,
         rgba(147, 86, 220, $opacity),
         rgba(255, 121, 218, $opacity)
     );
 }
 
-$breakpoints:("tablet":768px, "desktop":992px);
+$breakpoints:("tablet":$medium, "desktop":$large);
 
 @mixin responsive($appareil){
     @media (min-width:map-get($breakpoints, $appareil)){

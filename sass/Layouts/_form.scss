@@ -1,6 +1,16 @@
 .food__form {
 background-color: $gray-light;
  padding-bottom:20px;
+ @include responsive("tablet"){
+   order:1;
+   width:100%;
+
+} @include responsive("desktop"){
+   width:100%;
+   
+   
+}
+
 }
 
 .form__localisation{

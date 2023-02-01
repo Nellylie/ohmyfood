@@ -4,7 +4,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
 #menu__recette-2 {
@@ -13,7 +13,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
 }
 
 #menu__recette-3 {
@@ -22,7 +22,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 #menu__recette-4 {
@@ -31,7 +31,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
 }
 
 #menu__recette-5 {
@@ -40,7 +40,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 3.5s;
 }
 
 #menu__recette-6 {
@@ -49,7 +49,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 3.5s;
+  animation-delay: 4s;
 }
 
 #menu__recette-7 {
@@ -58,7 +58,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 4.5s;
 }
 
 #menu__recette-8 {
@@ -67,7 +67,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 4.5s;
+  animation-delay: 5s;
 }
 
 #menu__recette-9 {
@@ -76,7 +76,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 5s;
+  animation-delay: 5.5s;
 }
 
 #menu__recette-10 {
@@ -85,7 +85,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 5.5s;
+  animation-delay: 6s;
 }
 
 @keyframes apparition-menu {
@@ -107,14 +107,23 @@ body {
   color: #000;
   text-align: center;
   width: 100%;
-  max-width: 768px;
+  max-width: 600px;
   min-width: 250px;
   margin: auto;
+  overflow-x: hidden;
 }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   body {
-    min-width: 768px;
-    max-width: 992;
+    min-width: 600px;
+    max-width: 992px;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    min-width: 992px;
+    max-width: 2000px;
+    width: 100%;
   }
 }
 
@@ -162,29 +171,65 @@ button, input, select {
   height: 100%;
 }
 
+@media (min-width: 600px) {
+  .food__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .food__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
 .form__boutton {
   border-radius: 20px 20px 20px 20px;
   color: white;
   border: none;
   width: 170px;
   height: 40px;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  transition: opacity 0.5s;
+  margin: 20px;
 }
 
-.aime__animation, .restaurant__aime input:checked ~ .aime__coeur, .restaurant__aime input:hover ~ .aime__coeur {
-  background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
+.form__boutton:hover {
+  opacity: 0.5;
+}
+
+.header__banniere {
+  height: 300px;
 }
 
 .aime--menu-position {
   position: relative;
   right: 10px;
 }
+@media (min-width: 600px) {
+  .aime--menu-position {
+    left: 70%;
+    top: -20px;
+  }
+}
+@media (min-width: 992px) {
+  .aime--menu-position {
+    left: 80%;
+    top: -20px;
+  }
+}
 
 .aime__coeur {
-  color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   z-index: 2;
   transition: opacity 1s;
@@ -192,21 +237,40 @@ button, input, select {
 
 .aime__position {
   position: absolute;
-  right: 0px;
+  right: 5px;
   top: 0px;
+}
+@media (min-width: 600px) {
+  .aime__position {
+    right: 20px;
+    top: -30px;
+  }
+}
+@media (min-width: 992px) {
+  .aime__position {
+    right: 30px;
+    top: -30px;
+  }
 }
 
 .restaurant__aime {
   display: block;
   width: auto;
   position: relative;
-  top: -40px;
+  top: -50px;
   right: 0;
   font-size: 0.8rem;
 }
+@media (min-width: 600px) {
+  .restaurant__aime {
+    right: 0px;
+    top: -5px;
+    font-size: small;
+  }
+}
 
-.restaurant__aime input {
-  visibility: hidden;
+.restaurant__aime:hover .aime__coeur {
+  opacity: 1;
 }
 
 .label--width {
@@ -233,6 +297,7 @@ button, input, select {
   z-index: 1;
   transition: margin-right 1s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .cadre-check {
@@ -327,9 +392,54 @@ button, input, select {
   margin: auto;
   overflow: hidden;
 }
+@media (min-width: 600px) {
+  .menu__recette {
+    width: 90%;
+    max-width: 550px;
+    min-width: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .menu__recette {
+    width: 90%;
+    max-width: 390px;
+    min-width: 200px;
+  }
+}
 
 .menumain__validation {
   margin: 20px auto;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .main-menu {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 600px) {
+  .main-menu > h1 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .main-menu > h1 {
+    width: 100%;
+  }
 }
 
 #objet {
@@ -514,6 +624,41 @@ button, input, select {
   padding: 20px;
   margin: 0;
 }
+@media (min-width: 600px) {
+  .main__restaurants {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 1.5;
+    min-width: 390px;
+  }
+  .main__restaurants > h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (min-width: 992px) {
+  .main__restaurants {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 1;
+  }
+  .main__restaurants > h2 {
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+  }
+}
 
 .restaurants__menu {
   background-color: white;
@@ -522,6 +667,23 @@ button, input, select {
   align-content: center;
   border-radius: 40px;
   overflow: hidden;
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 600px) {
+  .restaurants__menu {
+    background-color: #F6F6F6;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+    width: 40%;
+    min-width: 180px;
+    font-size: medium;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants__menu {
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
+    width: 45%;
+    height: 15%;
+  }
 }
 
 .menu__lien {
@@ -535,9 +697,28 @@ button, input, select {
 }
 
 .carte__image {
+  position: relative;
   margin-top: -40px;
   height: 200px;
   width: 100%;
+}
+@media (min-width: 600px) {
+  .carte__image {
+    height: 160px;
+  }
+}
+
+.image__nouveau {
+  background-color: #99E2D0;
+  border-radius: 5px;
+  font-size: medium;
+  color: #278870;
+  font-weight: 700;
+  position: absolute;
+  padding: 5px 15px;
+  top: 50px;
+  right: 20px;
+  z-index: 5;
 }
 
 .carte__titre {
@@ -548,6 +729,16 @@ button, input, select {
 .titre__h2 {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 600px) {
+  .titre__h2 {
+    font-size: medium;
+  }
+}
+@media (min-width: 992px) {
+  .titre__h2 {
+    font-size: larger;
+  }
 }
 
 .titre__description {
@@ -568,18 +759,55 @@ button, input, select {
   justify-content: center;
   margin: auto;
 }
+@media (min-width: 600px) {
+  .main__fonctionnement {
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 0;
+    height: 500px;
+    order: 2;
+    flex: 1;
+  }
+  .main__fonctionnement > h2 {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (min-width: 992px) {
+  .main__fonctionnement {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 5%;
+    margin-top: 0;
+    flex: 1;
+    width: 90%;
+  }
+  .main__fonctionnement > h2 {
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    font-size: 1rem;
+    flex: 0.2;
+  }
+}
 
 .fonctionnement__indication {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: row;
   margin: 20px auto;
-  padding: 20px;
+  padding: 10px 20px;
   width: 70%;
   border-radius: 100px;
   box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.16);
   font-size: 0.8rem;
   font-weight: 600;
+}
+@media (min-width: 992px) {
+  .fonctionnement__indication {
+    width: 100%;
+  }
 }
 
 .fonctionnement__indication--rose {
@@ -617,6 +845,17 @@ button, input, select {
 .food__form {
   background-color: #F6F6F6;
   padding-bottom: 20px;
+}
+@media (min-width: 600px) {
+  .food__form {
+    order: 1;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .food__form {
+    width: 100%;
+  }
 }
 
 .form__localisation {
@@ -661,6 +900,24 @@ footer {
 
 .food-footer__nav {
   text-align: left;
+}
+
+@media (min-width: 600px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-right: 20px;
+    gap: 20px;
+  }
+}
+@media (min-width: 992px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 }
 
 li {

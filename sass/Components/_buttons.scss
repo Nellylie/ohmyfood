@@ -2,180 +2,245 @@
 @use '../Utils/_variables.scss';
 
 .form__boutton {
-    border-radius: 20px 20px 20px 20px;
-    color: white;
-    border: none;
-    width: 170px;
-    height: 40px;
-    @include mixins.gradiant(1);
+  border-radius: 20px 20px 20px 20px;
+  color: white;
+  border: none;
+  width: 170px;
+  height: 40px;
+  @include mixins.gradiant(1);
+  transition:opacity 0.5s;
+  margin:20px;
 }
 
-.aime__animation {
-    background: -webkit-linear-gradient(90deg, $color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
+.form__boutton:hover{
+  opacity:0.5;
+  
 }
-.aime--menu-position{
-    position:relative;
-    right:10px;
+.header__banniere{
+    height:300px;
+}
+.aime--menu-position {
+  position: relative;
+  right: 10px;
+  @include responsive('tablet') {
+    left: 70%;
+    top:-20px;
+  }
+  @include responsive('desktop') {
+    left: 80%;
+    top:-20px;
+  }
 }
 
 .aime__coeur {
-    color: rgb(255, 255, 255);
-    opacity: 0;
-    z-index: 2;
-    transition: opacity 1s;
+  background: -webkit-linear-gradient(90deg, $color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1s;
 }
 
 .aime__position {
-    position: absolute;
-    right:0px;
-    top:0px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  @include responsive("tablet") {
+    right: 20px;
+  top: -30px;
+  }
+  @include responsive("desktop") {
+    right: 30px;
+  top: -30px;
+  }
 }
 
 .restaurant__aime {
-    display:block;
-    width:auto;
-    position: relative;
-    top:-40px;
-    right:0;
-    font-size: 0.8rem;
+  display: block;
+  width: auto;
+  position: relative;
+  top: -50px;
+  right: 0;
+  font-size: 0.8rem;
+  @include responsive("tablet") {
+    right: -0px;
+    top: -5px;
+    font-size: small;
+  }
 }
 
-.restaurant__aime input {
-    visibility: hidden;
-}
-
-.restaurant__aime input:hover~.aime__coeur {
-    @extend .aime__animation;
-}
-
-.restaurant__aime input:checked~.aime__coeur {
-    @extend .aime__animation;
+.restaurant__aime:hover {
+  .aime__coeur{
+    opacity: 1;}
 }
 
 .label--width {
-    width: 50%;
+  width: 50%;
 }
 
 .menu-aime {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .recette {
-    &__validation {
-        background-color: #99e2d0;
-        color: $white;
-        font-size: 1rem;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        width: 20%;
-        margin-right: -20%;
-        max-width:100px;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        justify-content: center;
-        z-index: 1;
-        transition: margin-right 1s;
-        overflow: hidden;
-    }
-}
-.cadre-check{
-    margin:auto;
-    position:relative;
-    width:30px;
-    height:30px;
-    text-align: center;
+  &__validation {
+    background-color: #99e2d0;
+    color: $white;
+    font-size: 1rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 20%;
+    margin-right: -20%;
+    max-width: 100px;
+    display: flex;
     align-items: center;
+    height: 100%;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;    
     z-index: 1;
-    transition:transform 1s;
+    transition: margin-right 1s;
     overflow: hidden;
+    
+  cursor: pointer;
+  }
 }
-.fa-check{
-    color:$color-tertiary;
-    margin:auto;
-    align-self: center;
-    vertical-align: middle;
+.cadre-check {
+  margin: auto;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 1s;
+  overflow: hidden;
 }
-
-
-
+.fa-check {
+  color: $color-tertiary;
+  margin: auto;
+  align-self: center;
+  vertical-align: middle;
+}
 
 .recette__titre-description {
-    font-size: 1rem;
-    white-space: nowrap;
-    flex: 1;
-    text-align: left;
-    width:100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding:10px 5px 0 10px;
-    transition:width 1s;
-    &>h3 {
-        margin:5px 0;
-    }
+  font-size: 1rem;
+  white-space: nowrap;
+  flex: 1;
+  text-align: left;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 10px 5px 0 10px;
+  transition: width 1s;
+  & > h3 {
+    margin: 5px 0;
+  }
 }
-.recette__titre-description>h3{
-    text-overflow: ellipsis;
-    overflow: hidden;
+.recette__titre-description > h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.menu__recette:hover{
-    .recette__titre-description{
-        width:30%;
-    }
-    .recette__validation{
-    margin-right:0px;}
-    .recette__validation .cadre-check .check--position{
-    
-    transform:rotate(-360deg);}}
+.menu__recette:hover {
+  .recette__titre-description {
+    width: 30%;
+  }
+  .recette__validation {
+    margin-right: 0px;
+  }
+  .recette__validation .cadre-check .check--position {
+    transform: rotate(-360deg);
+  }
+}
 
-.menu__recette {cursor: pointer;}
+.menu__recette {
+  cursor: pointer;
+}
 
-.check--position{
-        transform:rotate(200deg);
-        transition:transform 1s;
-    }
+.check--position {
+  transform: rotate(200deg);
+  transition: transform 1s;
+}
 
 .recette__description {
-    margin:0;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.recette__prix{
-    font-size: 1rem;
-    position:relative;
-    right:10px;
-    top:28px;
-    font-weight: 700;
-    &>p {
-    }
+.recette__prix {
+  font-size: 1rem;
+  position: relative;
+  right: 10px;
+  top: 28px;
+  font-weight: 700;
+  & > p {
+  }
 }
 .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__recette {
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
+    width: 90%;
+    max-width: 400px;
+    min-width: 200px;
     display: flex;
-    flex-direction: column;
-    gap:20px;
-    &__recette {
-        background-color:white;
-        font-size: 1rem;
-        border-radius:20px 20px 20px 20px;
-        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.137);
+    height: 80px;
+    margin: auto;
+    overflow: hidden;
+    @include responsive('tablet') {
         width: 90%;
-        max-width:400px;
-        min-width:200px;
-        display: flex;
-        height: 80px;
-        margin: auto;
-        overflow: hidden;
-    }
+        max-width: 550px;
+        min-width: 100px;
+       
+    
+      }
+      @include responsive('desktop') {
+        width: 90%;
+        max-width: 390px;
+        min-width: 200px;
+      }
+  }
 }
-.menumain__validation{
-    margin:20px auto;
+.menumain__validation {
+  margin: 20px auto;
+  position: relative;
+  width:100%;
 }
 
+.main-menu {
+  @include responsive('tablet') {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+   
+
+  }
+  @include responsive('desktop') {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    
+   
+  }
+  & > h1 {
+    @include responsive('tablet') {
+      width: 100%;
+    }
+    @include responsive('desktop') {
+      width: 100%;
+    }
+  }
+}

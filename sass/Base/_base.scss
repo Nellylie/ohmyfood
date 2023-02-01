@@ -9,13 +9,21 @@ body {
     color: #000;
     text-align: center;
     width:100%;
-    max-width: 768px;
+    max-width: 600px;
     min-width:250px;
     margin: auto;
-    @include responsive(tablet){
-         min-width:768px;
-         max-width: 992;
+    overflow-x: hidden;
+    @include responsive("tablet"){
+         min-width:600px;
+         max-width: 992px;
+         width:100%;
     }
+    @include responsive("desktop"){
+        min-width:992px;
+        max-width:2000px;
+        width:100%;
+       
+   }
     
 }
 h2 {
@@ -59,3 +67,19 @@ button,input,select{margin:0}
     height: 100%;
 }
 
+.food__main{
+@include responsive("tablet"){
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100%;
+  }
+  @include responsive("desktop"){
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100%;
+  }
+}
