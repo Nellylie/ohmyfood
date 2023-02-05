@@ -4,7 +4,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 #menu__recette-2 {
@@ -13,7 +13,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 #menu__recette-3 {
@@ -22,7 +22,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 
 #menu__recette-4 {
@@ -31,7 +31,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 
 #menu__recette-5 {
@@ -40,7 +40,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 3.5s;
+  animation-delay: 3s;
 }
 
 #menu__recette-6 {
@@ -49,7 +49,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 3.5s;
 }
 
 #menu__recette-7 {
@@ -58,7 +58,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 4.5s;
+  animation-delay: 4s;
 }
 
 #menu__recette-8 {
@@ -67,7 +67,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 5s;
+  animation-delay: 4.5s;
 }
 
 #menu__recette-9 {
@@ -76,7 +76,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 5.5s;
+  animation-delay: 5s;
 }
 
 #menu__recette-10 {
@@ -85,7 +85,7 @@
   animation-name: apparition-menu;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  animation-delay: 6s;
+  animation-delay: 5.5s;
 }
 
 @keyframes apparition-menu {
@@ -108,7 +108,7 @@ body {
   text-align: center;
   width: 100%;
   max-width: 600px;
-  min-width: 250px;
+  min-width: 320px;
   margin: auto;
   overflow-x: hidden;
 }
@@ -256,16 +256,25 @@ button, input, select {
 .restaurant__aime {
   display: block;
   width: auto;
-  position: relative;
+  position: absolute;
   top: -50px;
   right: 0;
   font-size: 0.8rem;
 }
 @media (min-width: 600px) {
   .restaurant__aime {
-    right: 0px;
-    top: -5px;
-    font-size: small;
+    float: right;
+    left: 150px;
+    top: 0px;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant__aime {
+    float: right;
+    left: 150px;
+    top: 0px;
+    font-size: 0.8rem;
   }
 }
 
@@ -320,6 +329,7 @@ button, input, select {
   margin: auto;
   align-self: center;
   vertical-align: middle;
+  padding-top: 2px;
 }
 
 .recette__titre-description {
@@ -379,6 +389,18 @@ button, input, select {
   flex-direction: column;
   gap: 20px;
 }
+@media (min-width: 600px) {
+  .menu {
+    width: 60%;
+    align-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .menu {
+    width: 30%;
+    align-self: flex-start;
+  }
+}
 .menu__recette {
   background-color: white;
   font-size: 1rem;
@@ -395,7 +417,7 @@ button, input, select {
 @media (min-width: 600px) {
   .menu__recette {
     width: 90%;
-    max-width: 550px;
+    max-width: 650px;
     min-width: 100px;
   }
 }
@@ -408,9 +430,18 @@ button, input, select {
 }
 
 .menumain__validation {
-  margin: 20px auto;
   position: relative;
   width: 100%;
+}
+@media (min-width: 600px) {
+  .menumain__validation {
+    margin: 20px auto;
+  }
+}
+@media (min-width: 992px) {
+  .menumain__validation {
+    margin: 20px auto;
+  }
 }
 
 @media (min-width: 600px) {
@@ -840,6 +871,18 @@ button, input, select {
   padding-top: 50px;
   margin-top: -100px;
   z-index: 4;
+}
+@media (min-width: 600px) {
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .food__form {

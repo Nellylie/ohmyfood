@@ -58,14 +58,21 @@
 .restaurant__aime {
   display: block;
   width: auto;
-  position: relative;
+  position: absolute;
   top: -50px;
   right: 0;
   font-size: 0.8rem;
   @include responsive("tablet") {
-    right: -0px;
-    top: -5px;
-    font-size: small;
+    float:right;
+    left:150px;
+    top: -0px;
+    font-size: 0.8rem;
+  }
+  @include responsive("desktop") {
+    float:right;
+    left:150px;
+    top: -0px;
+    font-size: 0.8rem;
   }
 }
 
@@ -122,6 +129,7 @@
   margin: auto;
   align-self: center;
   vertical-align: middle;
+  padding-top: 2px;
 }
 
 .recette__titre-description {
@@ -183,6 +191,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @include responsive('tablet') {
+    width: 60%;
+    align-self: center;
+  }
+  @include responsive('desktop') {
+  width:30%;
+  align-self:flex-start;
+  }
 
   &__recette {
     background-color: white;
@@ -198,10 +214,8 @@
     overflow: hidden;
     @include responsive('tablet') {
         width: 90%;
-        max-width: 550px;
+        max-width: 650px;
         min-width: 100px;
-       
-    
       }
       @include responsive('desktop') {
         width: 90%;
@@ -211,7 +225,12 @@
   }
 }
 .menumain__validation {
+  @include responsive('tablet') {
   margin: 20px auto;
+  }
+  @include responsive('desktop') {
+    margin: 20px auto;
+    }
   position: relative;
   width:100%;
 }
