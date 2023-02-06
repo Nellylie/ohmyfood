@@ -108,7 +108,7 @@ body {
   text-align: center;
   width: 100%;
   max-width: 600px;
-  min-width: 320px;
+  min-width: 330px;
   margin: auto;
   overflow-x: hidden;
 }
@@ -211,18 +211,19 @@ button, input, select {
 
 .aime--menu-position {
   position: relative;
-  right: 10px;
+  right: 0px;
+  top: 5px;
 }
 @media (min-width: 600px) {
   .aime--menu-position {
-    left: 70%;
-    top: -20px;
+    right: -350px;
+    top: 0px;
   }
 }
 @media (min-width: 992px) {
   .aime--menu-position {
-    left: 80%;
-    top: -20px;
+    right: -285;
+    top: 0;
   }
 }
 

@@ -21,14 +21,15 @@
 }
 .aime--menu-position {
   position: relative;
-  right: 10px;
+  right: 0px;
+  top:5px;
   @include responsive('tablet') {
-    left: 70%;
-    top:-20px;
+    right:-350px;
+    top:-0px;
   }
   @include responsive('desktop') {
-    left: 80%;
-    top:-20px;
+    right:-285;
+    top:0;
   }
 }
 
