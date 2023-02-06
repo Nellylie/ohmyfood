@@ -234,6 +234,7 @@ button, input, select {
   opacity: 0;
   z-index: 2;
   transition: opacity 1s;
+  cursor: pointer;
 }
 
 .aime__position {
