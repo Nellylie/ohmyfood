@@ -222,7 +222,7 @@ button, input, select {
 }
 @media (min-width: 992px) {
   .aime--menu-position {
-    right: -285;
+    right: -305px;
     top: 0;
   }
 }
